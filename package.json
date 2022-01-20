@@ -1,5 +1,5 @@
 {
-  "name": "bytebank-v2",
+  "name": "bytebank",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
