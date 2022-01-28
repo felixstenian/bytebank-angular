@@ -35,3 +35,14 @@
     border-bottom: 1px solid var(--primary);
   }
 }
+
+.listavazia {
+  display: flex;
+  justify-content: center;
+  p {
+    border-bottom: 1px solid var(--primary);
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    padding: 10px;
+  }
+
+}
