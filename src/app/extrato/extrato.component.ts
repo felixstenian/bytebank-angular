@@ -1,3 +1,4 @@
+import { Transferencia } from './../models/transferencia.model';
 import { Component, Input, OnInit } from '@angular/core';
 import { TransferenciaService } from '../services/transferencia.service';
 
@@ -15,7 +16,11 @@ export class ExtratoComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.transferencias = this.service.transferencias
+    // this.transferencias = this.service.transferencias // Recebendo lista de transferencia de um array no service
+    this.service.getTransferencias().subscribe((transferencias: Transferencia[]) => { // Recebendo lista de transferencias da api pelo metodo get no service
+      console.log(transferencias)
+      this.transferencias = transferencias
+    })
   }
 
 }
